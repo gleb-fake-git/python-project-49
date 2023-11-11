@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.1"
+version = "0.1.2"
 description = "challege 1"
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
@@ -10,6 +10,7 @@ packages = [
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
+brain-even = "brain_games.scripts.brain_even:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"
