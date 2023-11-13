@@ -1,5 +1,6 @@
 from random import randint
-import prompt
+from brain_games.game_engine import welcome_user, get_user_answer, message_lose
+from brain_games.game_engine import GAME_SETTINGS
 
 
 def generate_task():
@@ -9,29 +10,22 @@ def generate_task():
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
+    user_name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    attempts = 3
+    attempts = GAME_SETTINGS['game_attempts']
     while attempts > 0:
         number, right_answer = generate_task()
         print(f'Question: {number}')
-        user_message = prompt.string('')
+        user_message = get_user_answer()
         if user_message == right_answer:
             print('Correct!')
         else:
-            message_lose(right_answer, user_message, name)
+            message_lose(right_answer, user_message, user_name)
             break
         attempts -= 1
         if attempts == 0:
-            print(f'Congratulations, {name}!')
+            print(f'Congratulations, {user_name}!')
             break
-
-
-def message_lose(right, fail, name):
-    print(f'\'{fail}\' is wrong answer ;(. Correct answer was \'{right}\'.')
-    print(f'Let\'s try again, {name}!')
 
 
 if __name__ == '__main__':
