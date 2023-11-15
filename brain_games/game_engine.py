@@ -19,5 +19,6 @@ def get_user_answer():
 
 
 def message_lose(right_answer, fail_answer, user_name):
-    print(f'\'{fail_answer}\' is wrong answer ;(. Correct answer was \'{right_answer}\'.')
+    print(f'\'{fail_answer}\' is wrong answer ;(. Correct answer'
+          f' was \'{right_answer}\'.')
     print(f'Let\'s try again, {user_name}!')

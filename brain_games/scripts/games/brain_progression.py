@@ -1,4 +1,4 @@
-from random import randint, choice
+from random import randint
 from brain_games.game_engine import welcome_user, get_user_answer, message_lose
 from brain_games.game_engine import GAME_SETTINGS
 
