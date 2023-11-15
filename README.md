@@ -1,6 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/gleb-fake-git/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/gleb-fake-git/python-project-49/actions)
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/93eb3abfcdbf8ae42620/maintainability)](https://codeclimate.com/github/gleb-fake-git/python-project-49/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/93eb3abfcdbf8ae42620/maintainability)](https://codeclimate.com/github/gleb-fake-git/python-project-49/maintainability)
 
 brain-even:
 [![asciicast](https://asciinema.org/a/XbdDtY6qsL4tfiDb5X4ZahZV1.png)](https://asciinema.org/a/XbdDtY6qsL4tfiDb5X4ZahZV1)
