@@ -1,6 +1,5 @@
 from random import randint
-from brain_games.game_engine import welcome_user, get_user_answer, message_lose
-from brain_games.game_engine import GAME_SETTINGS
+from brain_games.game_engine import start_game
 
 
 def generate_task():
@@ -21,26 +20,12 @@ def generate_task():
             right_answer = value
         else:
             text_answer.append(str(value))
-    return right_answer, ' '.join(text_answer)
+    return str(right_answer), ' '.join(text_answer)
 
 
 def main():
-    user_name = welcome_user()
-    print('What number is missing in the progression?')
-    attempts = GAME_SETTINGS['game_attempts']
-    while attempts > 0:
-        right_answer, text_answer = generate_task()
-        print(f'Question: {text_answer}')
-        user_message = int(get_user_answer())
-        if user_message == right_answer:
-            print('Correct!')
-        else:
-            message_lose(right_answer, user_message, user_name)
-            break
-        attempts -= 1
-        if attempts == 0:
-            print(f'Congratulations, {user_name}!')
-            break
+    rules = 'What number is missing in the progression?'
+    start_game(generate_task, rules)
 
 
 if __name__ == '__main__':
