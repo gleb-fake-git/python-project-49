@@ -2,7 +2,13 @@ from random import randint
 from brain_games.game_engine import start_game
 
 
-def generate_task():
+def generate_task() -> (str, str):
+    """
+    Generate random number and answer
+
+    :return:
+    """
+
     number = randint(1, 1000)
     count_divided = 0
     for i in range(1, number + 1):

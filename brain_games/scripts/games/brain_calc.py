@@ -2,7 +2,13 @@ from random import randint, choice
 from brain_games.game_engine import start_game
 
 
-def generate_task():
+def generate_task() -> (str, str):
+    """
+    Generate random number and answer
+
+    :return:
+    """
+
     number1 = randint(1, 20)
     number2 = randint(1, 20)
     operations = ['+', '-', '*']

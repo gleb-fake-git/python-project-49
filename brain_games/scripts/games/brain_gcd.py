@@ -2,7 +2,13 @@ from random import randint
 from brain_games.game_engine import start_game
 
 
-def generate_task():
+def generate_task() -> (str, str):
+    """
+    Generate random progression and hidden number
+
+    :return:
+    """
+
     a = randint(1, 100)
     b = randint(1, 100)
     text_answer = f'{a} {b}'
