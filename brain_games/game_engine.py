@@ -1,4 +1,7 @@
 import prompt
+from collections.abc import Callable
+from typing import Union, Tuple
+
 
 GAME_SETTINGS = {
     'game_attempts': 3,
@@ -21,7 +24,7 @@ def message_lose(right_answer: str, fail_answer: str, user_name: str):
     print(f'Let\'s try again, {user_name}!')
 
 
-def start_game(game_task: callable, rules: str):
+def start_game(game_task: Callable[[], Union[Tuple[str, int], Tuple[str, str]]], rules: str):
     """
     Start game in depends what script was run
 
