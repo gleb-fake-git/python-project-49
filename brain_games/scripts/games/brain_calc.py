@@ -1,3 +1,4 @@
+import random
 from random import randint, choice
 from brain_games.game_engine import start_game
 from typing import Tuple
@@ -15,12 +16,12 @@ def generate_task() -> Tuple[str, str]:
     operations = ['+', '-', '*']
     operation = choice(operations)
     answer_text = f'{number1} {operation} {number2}'
-    if operation == '+':
-        answer_number = number1 + number2
-    elif operation == '-':
-        answer_number = number1 - number2
-    else:
-        answer_number = number1 * number2
+    calculation = {
+        '+': lambda a, b: a + b,
+        '-': lambda a, b: a - b,
+        '*': lambda a, b: a * b
+    }
+    answer_number = calculation[operation](number1, number2)
 
     return str(answer_number), answer_text
 
