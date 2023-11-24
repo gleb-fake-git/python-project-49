@@ -6,19 +6,6 @@ GAME_SETTINGS = {
 }
 
 
-def welcome_user():
-    """
-    User greetings
-
-    :return:
-    """
-
-    print(GAME_SETTINGS['general_greetings'])
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    return name
-
-
 def message_lose(right_answer: str, fail_answer: str, user_name: str):
     """
     Print loose message with right answer if user fail game
@@ -43,7 +30,9 @@ def start_game(game_task: callable, rules: str):
     :return:
     """
 
-    user_name = welcome_user()
+    print(GAME_SETTINGS['general_greetings'])
+    user_name = prompt.string('May I have your name? ')
+    print(f'Hello, {user_name}!')
     print(rules)
     attempts = GAME_SETTINGS['game_attempts']
     while attempts > 0:
