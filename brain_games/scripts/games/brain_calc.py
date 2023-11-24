@@ -1,8 +1,9 @@
 from random import randint, choice
 from brain_games.game_engine import start_game
+from typing import Tuple
 
 
-def generate_task() -> (str, str):
+def generate_task() -> Tuple[str, str]:
     """
     Generate random number and answer
 
